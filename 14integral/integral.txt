@@ -1,0 +1,21 @@
+1. 
+
+s +=(first add) x *(mul) x;
+x +=(second add) dx;
+
+mul: vmulpd  %ymm2, %ymm2, %ymm2 (in integral1.s)
+first add: vhaddpd %xmm2, %xmm2, %xmm3 (in integral1.s)
+second add: vaddsd  %xmm8, %xmm3, %xmm3 (in integral1.s)
+
+2.
+the throughput-imposed limit can be calclated as below:
+
+throughput of vhaddpd and vmulpd are 0.5
+	
+3.
+the latency-imposed limit can be calculated as below: 
+
+total latency = 3(vhaddpd) + 5(vmulpd) = 8 cycles
+n/loop = 4
+
+obtained cycles/n = 8/4 = 2.0

@@ -1,0 +1,3 @@
+set env DR=0
+set env MYTH_WORKER_NUM=1
+set env MYTH_DEF_STKSIZE=131072

@@ -1,0 +1,20 @@
+#!/bin/bash
+# this file be directly run on the master by
+#   ./jobm
+# or submit to the scheduler by
+#   qsub jobm
+
+#$ -cwd
+#$ -j y
+#$ -o out.txt
+# hard run time limit = 2 minutes!
+#$ -l h_rt=00:02:00
+
+#
+# this file demonstrates how to use make
+# to run many commands by makefile.
+# look inside job.mk
+#
+
+make -f job.mk
+

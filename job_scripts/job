@@ -1,0 +1,13 @@
+#!/bin/bash
+# this file be directly run on the master by
+#   ./job
+# or submit to the scheduler by
+#   qsub job
+
+#$ -cwd
+#$ -j y
+#$ -o out.txt
+# hard run time limit = 2 minutes!
+#$ -l h_rt=00:02:00
+
+./chol_main
