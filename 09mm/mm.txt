@@ -1,0 +1,14 @@
+1.
+vfmadd132ps
+
+2. the throughput-imposed limit
+2.0 instructions per cycle = 2.0*8 float*+ = 16.0float*+
+= 16.0 flops/cycles
+
+3. the latency-imposed limit
+0.2 instructions per cycle = 0.2*8 float*+
+= 1.6 flops/cycles
+
+4. 
+Calcurated flops/cycles on vectrized program was = 1.258 flops/clock.
+This is similar to (3)

@@ -7,7 +7,7 @@ void gemm(matrix& A, matrix& B, matrix& C) {
       asm volatile ("# loopbegin");
       #pragma omp simd reduction(+:c)
       for (long k = 0; k < K; k++) {
-	c += A(i,k) * B(k,j);
+	    c += A(i,k) * B(k,j);
       }
       asm volatile ("# loopend");
       C(i,j) += c;
